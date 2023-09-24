@@ -1,0 +1,76 @@
+@use '_colors' as *;
+
+$no-full-hd: 1200px;
+$netbook: 1040px;
+$tablet: 782px;
+$mobile: 320px; 
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin wrapper {
+  max-width: $no-full-hd;
+  width: 100%;
+  margin: 0 auto;
+  
+  @media (max-width: $no-full-hd) {
+    max-width: $netbook;
+  }
+
+  @media (max-width: $netbook) {
+    max-width: $tablet;
+  }
+
+  @media (max-width: $tablet) {
+    max-width: $mobile - 10px;
+  }
+}
+
+@mixin link {
+  text-decoration: none;
+  color: colors($color-status, "text-clr1");
+  &:hover {
+    text-shadow: colors($color-status, "text-shadow-hover");
+  }
+  &:focus {
+    text-shadow: colors($color-status, "text-shadow-hover");
+  }
+}
+
+@mixin button {
+  background-color: colors($color-bg, "bg-button");
+  color: colors($color-status, "text-clr1");
+  border-radius: 90px;
+  padding: 20px 30px;
+  &:hover {
+    background-color: colors($color-status, "bg-hover");
+    box-shadow: colors($color-status, "block-shadow-hover");;
+  }
+  &:focus {
+    background-color: colors($color-status, "bg-hover");
+    box-shadow: colors($color-status, "block-shadow-hover");;
+  }
+  &:disabled {
+    background-color: grey;
+    color: black;
+  }
+}
+
+@mixin background-blur{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+$border-radius: 20px;
+$border: 1px solid white;
+$height-header: 74px;

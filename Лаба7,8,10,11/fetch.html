@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klimova</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="header__logo">Julia<span>Klimova</span></a>
+    <button class="header__bth-icon" aria-label="menu" tabindex="1">
+      <span></span>       
+    </button>
+    <nav class="header__nav nav" role="navigation">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="./index.html"class = "nav__link" aria-label="about">Laba7</a></li>
+        <li class="nav__item"><a href="./vue.html" class = "nav__link" aria-label="vue">Laba11</a></li>
+        <li class="nav__item"><a href="./anime.html" class = "nav__link" aria-label="anime">Laba8</a></li>
+        <li class="nav__item"><a href="#" class = "nav__link" aria-label="fetch">Laba10</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="gallery">
+        <button class="gallery__button" aria-label="Обновить">Обновить</button>
+        <div class="gallery__wrapper">
+            <!-- <div class="gallery__item">
+              <figure class = "gallery__icon">
+                <img src="./img/experience-1@1x.jpg" alt="" class = "gallery__img">
+                <figcaption class="gallery__description">ghhghg</figcaption>
+              </figure>
+              <a href="" class="gallery__link">Buy</a>
+            </div> -->
+        </div>
+        <div class="gallery__loader"></div>
+        <div class="gallery__message message">
+          <p class="message__error"></p>
+        </div>
+      </section>
+      <section class="temperature">
+        <div class="temperature__wrapper">
+            <form action="#" method="post" class="temperature__form">
+                <label class="temperature__label" aria-label="Номер аудитории">
+                    Номер аудитории
+                    <input type="text" class="temperature__input temperature__input--class" name="class" value="1415" required>
+                </label>
+                <label class="temperature__label" aria-label="Температура">
+                    Температура
+                    <input type="number" class="temperature__input temperature__input--temp" name="temp" value="20" required>
+                </label>
+                <button class="temperature__button" type="submit" aria-label="Отправить">Отправить</button>
+            </form>
+        </div>
+      </section>
+      <div class="toasts toasts_hidden">
+        <button class="toasts__close">Закрыть</button>
+        <div class="toasts__body"></div>
+      </div>
+  </main>
+
+  <script src="./js/fetch.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Comfortaa";
+  src: url("Comfortaa bold.eot");
+  src: url("Comfortaa bold.woff2") format("woff2"), url("Comfortaa bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Philosopher ";
+  src: url("Philosopher regular.eot");
+  src: url("Philosopher regular.woff2") format("woff2"), url("Philosopher regular.woff") format("woff");
+}
+header, main, section, footer, nav {
+  margin-top: 20px;
+  padding: 0;
+}
+
+body {
+  background-color: #FAF0D7;
+  color: black;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Comfortaa";
+  font-weight: "bold";
+  font-style: normal;
+}
+
+p, a, ol, ul, li, button {
+  font-family: "Comfortaa";
+  font-weight: "normal";
+  font-style: normal;
+}
+
+ol, li {
+  list-style: none;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #9a7760;
+}
+a:focus {
+  color: #9a7760;
+}
+button {
+  background-color: #8CC0DE;
+  border-radius: 10px;
+  padding: 5px;
+}
+button:hover {
+  background-color: #9a7760;
+}
+button:focus {
+  background-color: #9a7760;
+}
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.list__item {
+  padding: 10px;
+}
+.list__link {
+  font-size: 28px;
+}
+
+.example__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.example__title {
+  font-size: 40px;
+}
+.example__subtitle {
+  font-size: 28px;
+}
+.example__img {
+  width: 500px;
+}
+
+.grid {
+  margin: 50px;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.col-1, .col-2, .col-3, .col-4,
+.col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col-12 {
+  background-color: #8CC0DE;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 20px;
+}
+
+.col-1 {
+  grid-column: span 1;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+.col-4 {
+  grid-column: span 4;
+}
+
+.col-5 {
+  grid-column: span 5;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-7 {
+  grid-column: span 7;
+}
+
+.col-8 {
+  grid-column: span 8;
+}
+
+.col-9 {
+  grid-column: span 9;
+}
+
+.col-10 {
+  grid-column: span 10;
+}
+
+.col-11 {
+  grid-column: span 11;
+}
+
+.col-12 {
+  grid-column: span 12;
+}/*# sourceMappingURL=style.css.map */

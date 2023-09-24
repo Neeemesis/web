@@ -1,0 +1,12 @@
+@use "sass:map";
+@use 'colors' as *;
+
+@mixin grid-template($col-num) {
+  .col-#{$col-num} {
+    grid-column: span $col-num;
+
+  }
+}
+
+
+

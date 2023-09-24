@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klimova</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="header__logo">Julia<span>Klimova</span></a>
+    <button class="header__bth-icon" aria-label="menu" tabindex="1">
+      <span></span>       
+    </button>
+    <nav class="header__nav nav" role="navigation">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="./index.html"class = "nav__link" aria-label="laba7">Laba7</a></li>
+        <li class="nav__item"><a href="#" class = "nav__link" aria-label="Laba11">Laba11</a></li>
+        <li class="nav__item"><a href="./anime.html" class = "nav__link" aria-label="Laba8">Laba8</a></li>
+        <li class="nav__item"><a href="./fetch.html" class = "nav__link" aria-label="Laba10">Laba10</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class = "posts" id="app">
+      <div class="posts__wrapper">
+        <form class="posts__form" @submit.prevent>
+          <h1 class="posts__title" >Создание поста</h1>
+          <textarea
+            rows="8"
+            class="posts__textarea" 
+            @input="body = $event.target.value"
+            v-bind:value="body"
+            name="Описание">
+          </textarea>
+          <button 
+            class="posts__button"
+            @click="createPost" 
+            v-bind:disabled="isButtonDisabled">
+            Создать
+          </button>
+          <p class="posts__counter-symbol">Число символов: <span class="counter-text" v-bind:class="{ isRed: counterLength, isYellow: counterLengthYellow  }">{{ length }}</span> / 144</p>
+        </form>
+        <h2 class="posts__subtitle" v-if="posts.length == 0">Записей нет</h2>
+        <h2 class="posts__subtitle" v-else-if="posts.length == 1">Запись</h2>
+        <h2 class="posts__subtitle" v-else>Записи</h2>
+        <p class="posts__counter-posts"v-show="posts.length > 1">Количество записей: {{ posts.length }}</p>
+        <article class="posts__post post" v-for="post in posts" :key="post.id">
+          <p class="post__description">{{ post.body }}</p>
+          <p class="post__date">{{ post.date }}</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+  </footer>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/lab11.js"></script>
+</body>
+</html>

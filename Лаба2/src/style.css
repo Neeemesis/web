@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --min-width: 1200px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+
+.title {
+  margin-top: 40px;
+}
+
+.container {
+  max-width: var(--min-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  min-width: var(--min-width);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px 10px;
+  margin: 50px;
+}
+
+.nav__link {
+  color: #212121;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  border-radius: 4px;
+}
+
+
+.nav__link:hover {
+  color: red;
+}
+
+.nav__link--active {
+  color: red;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center
+}
+
+.gallery {
+  max-width: fit-content;
+  border: 1px solid #212121;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.gallery__icon, .menu__icon {
+  margin: 20px;
+}
+
+.icon__use, .menu__icon {
+  stroke: red;
+  fill: none;
+}
+
+.gallery__icon:hover {
+  cursor: pointer;
+}
+
+.gallery__icon:hover use {
+  stroke: black;
+}
+
+.menu__icon:hover {
+  stroke:black;
+}
+
+.menu__icon:hover > .line1 {
+  animation: line1 2s forwards;
+}
+
+@keyframes line1 {
+  0% {
+
+  }
+  100% {
+    transform: rotate(45deg) translateX(10px) translateY(-5px);
+  }
+  
+}
+
+.menu__icon:hover > .line2 {
+  animation: line2 1s forwards;
+}
+
+@keyframes line2 {
+  0% {
+
+  }
+  100% {
+    opacity: 0;
+  }
+  
+}
+
+.menu__icon:hover > .line3 {
+  animation: line3 2s forwards;
+}
+
+@keyframes line3 {
+  0% {
+
+  }
+  100% {
+    transform: rotate(-45deg) translateX(-20px) translateY(3px);
+  }
+  
+}
+
+.city {
+  width: 700px;
+  margin-top: 20px;
+  background: #ffb6c1;
+}
+
+.city__behind {
+  animation: goRight 2.5s linear infinite;
+}
+
+
+.city__middle {
+  animation: goRight 3.5s linear infinite;
+}
+
+.city__middle2 {
+  animation: goRight 3.5s linear infinite;
+  animation-delay: 1.3s;
+}
+
+.city__front {
+  animation: goRight 4.5s linear infinite;
+}
+
+
+
+
+
+@keyframes goRight {
+  0% {
+      transform: translateX(-120%);
+  }
+  100% {
+      transform: translateX(120%);
+  }
+}
+
+.map__svg {
+  margin-bottom: 100px;
+}
+
+.text {
+  opacity: 0;
+  padding: 10px;
+  fill: red;
+  background-color: #D2E4FF;
+}
+
+.home:hover {
+  fill: red;
+}
+
+.home_1:hover ~ .home_1--text {
+  opacity: 1;
+  transform: translateY(10%) translateY(-5%);
+}
+
+.home_2:hover ~ .home_2--text {
+  opacity: 1;
+  transform: translateY(10%) translateY(-5%);
+}
+
+.home_3:hover ~ .home_3--text {
+  opacity: 1;
+  transform: translateY(10%) translateY(-5%);
+}
+
+.home_4:hover ~ .home_4--text {
+  opacity: 1;
+  transform: translateY(10%) translateY(-5%);
+}
+
+.home_5:hover ~ .home_5--text {
+  opacity: 1;
+  transform: translateY(10%) translateY(-5%);
+}
+
+.home_6:hover ~ .home_6--text {
+  opacity: 1;
+  transform: translateY(10%) translateY(-5%);
+}
+
+
+
+

@@ -1,0 +1,49 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+@use "./base" as *;
+
+.hidden{
+  display: none
+}
+#notification-message {
+  font-size: 0.6rem;
+}
+#notification {
+  padding: 1rem;
+}
+.notification-content {
+  background-color: #176B87;
+  border-radius: 20px;;
+  padding: 20px;
+  color: #EEEEEE;
+}
+
+#notification {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+#notification-name::after {
+  right: 11px;
+}
+
+#notification-name,#notification-message {
+  margin: 10px 0px;
+  display: block;
+}
+#notification-name {
+  font-size: 1.55rem;
+}
+#notification-message {
+  font-size: 1.4rem;
+}
+#notification {
+  padding: 1rem;
+  color: colors($color-text, "text-clr1");;
+}
+
+#notification-close {
+  color: #EEEEEE;
+  font-size: 1rem;
+}

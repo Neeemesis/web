@@ -1,0 +1,21 @@
+@use '_fonts' as *;
+@use '_colors' as *;
+
+@mixin text-title {
+  @include font-face("Comfortaa", "bold", normal)
+}
+
+@mixin text-subtitle {
+  @include font-face("Comfortaa", "normal", normal)
+}
+
+@mixin images {
+  width: 100%;
+}
+
+
+
+
+
+
+

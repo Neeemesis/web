@@ -1,0 +1,26 @@
+@use "sass:map";
+
+$color-bg: (
+  "bg-clr-1": #FAF0D7,
+  "bg-clr-3": #8CC0DE,
+  "bg-clr-2": #8CC0DE
+);
+
+$color-text: (
+  "text-clr": black,
+);
+
+$color-status: (
+  "hover-clr": #9a7760,
+  "focus-clr": #9a7760,
+  "active-color": #F4BFBF,
+  "disable-color": #8CC0DE
+);
+
+@function colors($map, $key) {
+  @return map.get($map, $key);
+}
+
+@mixin gradient ($first-clr, $second-clr){
+  background: linear-gradient($first-clr, $second-clr);
+}

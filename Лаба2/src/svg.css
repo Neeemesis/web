@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --min-width: 1200px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+
+.title {
+  margin-top: 40px;
+}
+
+.container {
+  max-width: var(--min-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  max-width: var(--min-width);
+  min-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px 10px;
+  margin: 50px;
+}
+
+.nav__link {
+  color: #212121;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  border-radius: 4px;
+}
+
+.nav__link:hover {
+  color: red;
+}
+
+.nav__link--active {
+  color: red;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.svg {
+  max-width: 800px;
+  height: 600px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  border: 1px solid black;
+  border-radius: 30px;
+  overflow: hidden;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+      'link svg1 svg1 svg1 svg1 svg1 svg1'
+      'link svg2 svg2 svg3 svg3 svg4 svg4'
+      'link svg5 svg5 svg5 svg6 svg6 svg6';
+}
+
+
+
+.svg__links {
+  grid-area: link;
+  border-right: 1px solid black;
+}
+
+.svg__title {
+  margin: 20px;
+}
+
+.svg__list {
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.svg__link {
+  text-decoration: none;
+  color: red;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.svg__link:hover {
+  color: black;
+}
+
+
+.svg__img1 {
+  grid-area: svg1;
+}
+
+.svg__img2 {
+  grid-area: svg2;
+}
+
+.svg__img3 {
+  grid-area: svg3;
+}
+
+.svg__img4 {
+  grid-area: svg4;
+}
+
+.svg__img5 {
+  grid-area: svg5;
+}
+
+.svg__img6 {
+  grid-area: svg6;
+}
+
+.gallery {
+  margin-top: 50px;
+  max-width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.gallery__item {
+  display: grid;
+}
+
+.gallery__icon {
+  width: 100%;
+  height: 100%;
+  grid-area: 1 / 1 / -1 / -1;
+}
+
+.gallery__item:hover > .gallery__icon {
+  filter: blur(5px);
+}
+
+.gallery__item:hover > .gallery__link {
+  opacity: 1;
+  pointer-events: all;
+  scale: 1;
+  transition: .3s all ease-in-out;
+}
+
+.gallery__link {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s all ease-in-out;
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+  padding: 24px;
+  grid-area: 1 / 1 / -1 / -1;
+  place-self: center;
+  opacity: 0;
+  scale: 0;
+}

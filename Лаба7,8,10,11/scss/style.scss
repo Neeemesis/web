@@ -1,0 +1,81 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+@use "./base" as *;
+
+@font-face {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Futura-PT-bold.woff2),
+  url(../fonts/Futura-PT-bold.woff);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Futura-PT.woff2),
+  url(../fonts/Futura-PT.woff);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT light";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Futura-PT-light.woff),
+  url(../fonts/Futura-PT-light.woff);
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+body {
+  @include font-face("Futura PT", normal, 400);
+  position: relative;
+  font-size: 22px;
+  line-height: 118%;
+  color: colors($color-text, "text-clr1");
+  background-color: colors($color-bg, "bg-body");
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.skip-link {
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  color: white;
+  background: #0034A8;
+  transform: translateY(-100%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@import "./header";
+@import "./notification";
+@import "./anime";
+@import "./gallery";
+@import "./temperature";
+@import "./toast";
+@import "./vue";

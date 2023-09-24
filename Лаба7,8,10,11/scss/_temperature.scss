@@ -1,0 +1,54 @@
+@use "./colors" as *;
+@use "./base" as *;
+
+.temperature {
+    max-width: 650px;
+    margin: 0 auto;
+    margin-top: 250px;
+    padding-bottom: 250px;
+    &__form {
+        max-width: 650px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    &__input {
+        font-size: 1.3rem;
+        margin: 20px 0px;
+        width: 100%;
+        border-radius: $border-radius;
+        padding: 20px;
+    &:focus {
+        background-color: colors($color-status, "bg-hover");
+        color: colors($color-status, "text-hover");
+    }
+    }
+
+    &__button {
+        width: 100%;
+        border: 0;
+        @include button;
+        color: white;
+        font-size: 1rem;
+        &:disabled {
+            background-color: grey;
+            color: black;
+        }
+    }
+}
+
+
+@media (max-width: $tablet) { 
+  
+    .temperature {
+      margin-top: 150px;
+      padding: 0px 20px 20px 20px;
+
+      &__input {
+        font-size: 0.8rem;
+        border-radius: 40px;
+      }
+    }
+}
+  

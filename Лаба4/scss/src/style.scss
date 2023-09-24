@@ -1,0 +1,142 @@
+@use './colors' as *;
+@use './fonts' as *;
+@use './mixin' as *;
+@use './grid' as *;
+@use './indentation-group' as *;
+@use './tags' as *;
+
+
+@font-face {
+  font-family: "Comfortaa";   
+  src: url('Comfortaa bold.eot');                                     
+  src: url('Comfortaa bold.woff2') format('woff2'),                    
+       url('Comfortaa bold.woff') format('woff')  
+}
+
+@font-face {
+  font-family: "Philosopher ";  
+  src: url('Philosopher regular.eot');                                     
+  src: url('Philosopher regular.woff2') format('woff2'),                    
+       url('Philosopher regular.woff') format('woff')  
+}
+
+
+header, main, section, footer, nav {
+  @include indentation-group;
+}
+
+body {
+  background-color: colors($color-bg, "bg-clr-1");
+  color: colors($color-text, "text-clr");
+}
+
+img {
+  @include images;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include text-title;
+}
+
+p, a, ol, ul, li, button {
+  @include text-subtitle;
+}
+
+ol, li {
+  list-style: none;
+  color: colors($color-text, "text-clr");
+}
+
+a {
+  text-decoration: none;
+  color: colors($color-text, "text-clr");
+  &:hover {
+    color: colors($color-status, "hover-clr");
+  }
+  &:focus {
+    color: colors($color-status, "focus-clr");
+  }
+  &:active {
+    color: colors($color-status, "active-clr");
+}
+}
+
+button {
+  color: colors($color-text, "text-clr2");
+  background-color: colors($color-bg, "bg-clr-3");
+  border-radius: 10px;
+  padding: 5px;
+  &:hover {
+    background-color: colors($color-status, "hover-clr");
+  }
+  &:focus {
+    background-color: colors($color-status, "focus-clr");
+  }
+  &:active {
+    background-color: colors($color-status, "active-clr");
+  }
+  &:disabled {
+    background-color: colors($color-status, "disable-clr");
+}
+}
+
+.wrapper {
+  @include wrapper;
+}
+
+.list {
+  @include flex;
+
+  &__item {
+    padding: 10px;
+  }
+
+  &__link {
+    font-size: 28px;
+  }
+}
+
+.example {
+  &__wrapper {
+    @include flex;
+  }
+
+  &__title {
+    font-size: 40px;
+  }
+
+  &__subtitle {
+    font-size: 28px;
+  }
+
+  &__img {
+    width:500px;
+  }
+}
+
+.grid {
+  margin: 50px;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.col-1, .col-2, .col-3, .col-4,
+.col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col-12 {
+  color: colors($color-text, "text-clr2");
+  background-color: colors($color-bg, "bg-clr-3");
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 20px;
+}
+
+@for $x from 1 through 12 {
+  @include grid-template($x);
+
+}
+
+
+
+

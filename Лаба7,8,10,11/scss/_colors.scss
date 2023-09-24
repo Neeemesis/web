@@ -1,0 +1,22 @@
+@use "sass:map";
+
+$color-bg: (
+  "bg-body": #EEEEEE,
+  "bg-button": #053B50
+);
+
+$color-status: (
+  "bg-hover": #176B87,
+  "text-hover": #176B87,
+  "text-shadow-hover": 0px 4px 4px rgb(100, 204, 197),
+);
+
+$color-text: (
+  "text-clr1": #176B87,
+  "text-clr2": #053B50
+);
+
+@function colors($map, $key) {
+  @return map.get($map, $key);
+}
+
